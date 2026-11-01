@@ -14,6 +14,7 @@ After SO installation you will need to install guest aditions from pacman:
 ```sh
 sudo pacman -Syu
 sudo pacman -S virtualbox-guest-utils
+sudo systemctl enable --now vboxservice.service
 ```
 
 And them reboot
@@ -33,5 +34,5 @@ sudo pacman -S waybar
 To see a waybar, run the command:
 
 ```sh
-cp .config/waybar/config.jsonc ~/.config/waybar/ & waybar
+cp -r .config/waybar ~/.config & waybar
 ```

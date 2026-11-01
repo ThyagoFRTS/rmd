@@ -1,0 +1,67 @@
+@define-color primary-bg #08090B;
+@define-color primary-color #D9D1C5;
+@define-color primary-support-color #292724;
+
+@define-color secondary-bg #191817;
+@define-color secondary-color #81796F;
+@define-color secondary-support-color #514A45;
+
+
+* {
+  font-family: JetbrainsMono Nerd Font, AtkinsonMono Nerd Font;
+  font-size: 12px;
+  padding: 0px 2px 0px 2px;
+  min-height: 0;
+}
+/* globals */
+tooltip {
+	background: @primary-bg;
+	border-radius: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #262626;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+/* Custom Power Menu */
+menu {
+	border-radius: 15px;
+	background: @secondary-bg;
+	color: @secondary-color;
+}
+menuitem {
+	border-radius: 15px;
+}
+
+/* Container */
+#battery {
+	background-color: @primary-bg;
+	padding: 5px 10px;
+    opacity: 0.9;
+}
+#custom-power {
+	background-color: @primary-bg;
+	padding: 5px 10px;
+    opacity: 0.9;
+    border-radius: 0px 30px 30px 0px;
+}
+
+/* Colors */
+ #battery, #custom-power {
+    color: @primary-color;
+}
+
+/* Battery */
+#battery.charging {
+    color: #9ec49f;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #c49ea0;
+    color: #0f0f0f;
+}
+

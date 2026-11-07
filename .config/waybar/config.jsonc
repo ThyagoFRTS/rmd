@@ -6,11 +6,10 @@
     // "spacing": 4,
     "modules-left": [
         "clock",
-        "battery"
-    ],
-    "modules-center": [
+        "battery",
         "pulseaudio"
     ],
+    "modules-center": [],
     "modules-right": [
         "network",
         "custom/power"
@@ -31,7 +30,7 @@
         },
         "tooltip": true,
         "tooltip-format": "{capacity}%",
-        "format": "{capacity}% {icon}",
+        "format": "{capacity}% <span rise='1pt'>{icon}</span>",
         "format-icons": {
             "default": [
                 "\uf244", // #battery-empty
@@ -63,16 +62,16 @@
         }
     },
     "clock": {
-        "format": "\uf133 {:%Y/%m/%d %H:%M}", // Calendar symbol
+        "format": "<span rise='1.5pt'>\uf133</span> {:%Y/%m/%d %H:%M}", // Calendar symbol
         "timezone": "America/Sao_Paulo",
         "tooltip": true,
-        "tooltip-format": "{:%A, %B %d, %Y (%R)} ",
+        "tooltip-format": "{:%A, %B %d, %Y (%R)} "
     },
     "network": {
         // "interface": "wlp2s0",
         "format": "{ifname}",
-        "format-wifi": "{essid} ({signalStrength}%) \uf1eb", // wifi symbol
-        "format-ethernet": "eth ({ifname}) \udb83\udc54", // connection ok symbol
+        "format-wifi": "{essid} ({signalStrength}%) <span rise='1pt'>\uf1eb</span>", // wifi symbol
+        "format-ethernet": "eth ({ifname}) <span rise='1pt'>\udb83\udc54</span>", // connection ok symbol
         "format-disconnected": "\udb80\udf19", // lan disconnected symbol
         "tooltip": true,
         "tooltip-format": "{ifname}",
@@ -82,22 +81,17 @@
         "max-length": 50
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
+        "format": "{volume}% <span rise='1pt'>{icon}</span>",
+        "format-muted": "<span rise='1pt'>\uf466</span>",
+        "format-bluetooth": "{volume}% <span rise='1pt'>{icon}</span>",
         "format-icons": {
-            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
-            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
-            "headphone": "",
-            "hands-free": "󰂑",
-            "headset": "󰂑",
-            "phone": "",
-            "phone-muted": "",
-            "portable": "",
-            "car": "",
+            "headphone": "\uf025",
+            "hands-free": "\udb80\udece",
+            "headset": "\udb80\udece",
+            "phone": "\uf095",
+            "phone-muted": "\ued17",
             "default": [
-                "",
-                ""
+                "\uf485"
             ]
         },
         "scroll-step": 1,

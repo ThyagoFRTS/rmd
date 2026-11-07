@@ -6,71 +6,79 @@
 @define-color secondary-color #81796F;
 @define-color secondary-support-color #514A45;
 
-
 * {
-  font-family: JetbrainsMono Nerd Font, AtkinsonMono Nerd Font;
+  font-family:
+    /* JetbrainsMono Nerd Font, */ AtkinsonMono Nerd Font;
   font-size: 12px;
   padding: 0px 2px 0px 2px;
   min-height: 0;
 }
 /* globals */
 tooltip {
-	background: @primary-bg;
-	border-radius: 15px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #262626;
+  background: @primary-bg;
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #262626;
 }
 
 window#waybar {
-    background: transparent;
-    color: @primary-color;
+  background: transparent;
+  color: @primary-color;
 }
 
 /* Custom Power Menu */
 menu {
-	border-radius: 15px;
-	background: @secondary-bg;
-	color: @secondary-color;
+  border-radius: 15px;
+  background: @secondary-bg;
+  color: @secondary-color;
 }
 menuitem {
-	border-radius: 15px;
+  border-radius: 15px;
 }
 
 /* Container */
-#battery, #network, #custom-power, #clock {
-    background-color: @primary-bg;
-    padding: 5px 10px;
-    opacity: 0.9;
-    border-style: solid;
-    border-color: @primary-color;
+#battery,
+#network,
+#custom-power,
+#clock,
+#pulseaudio {
+  background-color: @primary-bg;
+  padding: 5px 10px;
+  opacity: 0.9;
+  border-style: solid;
+  border-color: @primary-color;
 }
 
-#battery, #network{
-    border-width: 1px 0px;
+/* Container borders */
+#battery,
+#network,
+#pulseaudio {
+  border-width: 1px 0px;
 }
 #custom-power {
-    border-width: 1px 1px 1px 0px;
-    border-radius: 0px 30px 30px 0px;
+  border-width: 1px 1px 1px 0px;
+  border-radius: 0px 30px 30px 0px;
 }
 #clock {
-    border-width: 1px 0px 1px 1px;
-    border-radius: 30px 0px 0px 30px;
+  border-width: 1px 0px 1px 1px;
+  border-radius: 30px 0px 0px 30px;
 }
 
 /* Colors */
- #battery, #custom-power {
-    color: @primary-color;
+#battery,
+#custom-power {
+  color: @primary-color;
 }
 
 /* Battery */
 #battery.charging {
-    color: #9ec49f;
+  color: #9ec49f;
 }
 
 #battery.warning:not(.charging) {
-    background-color: #c49ea0;
-    color: #0f0f0f;
+  background-color: #b6a477;
+  color: #0f0f0f;
 }
 
 /* Audio */

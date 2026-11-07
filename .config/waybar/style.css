@@ -81,4 +81,6 @@ menuitem {
   color: #0f0f0f;
 }
 
-/* Audio */
+#battery.critical:not(.charging) {
+  background-color: #730312;
+}

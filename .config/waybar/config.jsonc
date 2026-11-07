@@ -11,6 +11,7 @@
     ],
     "modules-center": [],
     "modules-right": [
+        "bluetooth",
         "network",
         "custom/power"
     ],
@@ -96,5 +97,26 @@
         },
         "scroll-step": 1,
         "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+        "format": "<span rise='1.5pt'>{icon}</span> {status}",
+        "format-off": "<span rise='1.5pt'>{icon}</span> off",
+        "format-on": "<span rise='1.5pt'>{icon}</span> on",
+        "format-connected": "<span rise='1.5pt'>{icon}</span> {device_alias}",
+        "format-connected-battery": "<span rise='1.5pt'>{icon}</span> {device_alias} {device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "format-icons": {
+            "connected": "\udb80\udcb1",
+            "connected-battery": "\udb80\udcb1",
+            "on": "\udb80\udcb1",
+            "off": "\udb80\udcb2",
+            "default": [
+                "\udb80\udcaf"
+            ]
+        }
     }
 }

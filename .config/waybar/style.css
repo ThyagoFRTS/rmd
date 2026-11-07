@@ -42,7 +42,8 @@ menuitem {
 #network,
 #custom-power,
 #clock,
-#pulseaudio {
+#pulseaudio,
+#bluetooth {
   background-color: @primary-bg;
   padding: 5px 10px;
   opacity: 0.9;
@@ -53,7 +54,8 @@ menuitem {
 /* Container borders */
 #battery,
 #network,
-#pulseaudio {
+#pulseaudio,
+#bluetooth {
   border-width: 1px 0px;
 }
 #custom-power {
